@@ -1,0 +1,16 @@
+{
+  "name": "travel-osm-data-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Build scripts for the OpenStreetMap-derived data in the travel app city packages: offline map, hotel base, walking graph.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "map": "node map/extract-city.ts",
+    "hotels": "node hotels/fetch-osm-hotels.ts",
+    "graph": "node --max-old-space-size=6144 routing/build-graph.ts"
+  },
+  "dependencies": {}
+}
